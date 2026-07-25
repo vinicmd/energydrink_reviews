@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { ReviewController } from "../controllers/review.controller.ts";
-import { ensureAuthenticated } from "../middlewares/ensureAuthenticated.ts";
+import { ReviewController } from "../controllers/review.controller";
+import { ensureAuthenticated } from "../middlewares/ensureAuthenticated";
 
 export const reviewRoutes = Router();
 const reviewController = new ReviewController();

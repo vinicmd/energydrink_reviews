@@ -1,9 +1,9 @@
 import { Request, Response } from "express";
-import { ReviewService } from "../services/review.service.ts";
+import { ReviewService } from "../services/review.service";
 import {
   createReviewSchema,
   updateReviewSchema,
-} from "../schemas/review.schema.ts";
+} from "../schemas/review.schema";
 
 const reviewService = new ReviewService();
 

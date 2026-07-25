@@ -1,9 +1,9 @@
 import { Request, Response } from "express";
-import { ProductService } from "../services/product.service.ts";
+import { ProductService } from "../services/product.service";
 import {
   createProductSchema,
   updateProductSchema,
-} from "../schemas/product.schema.ts";
+} from "../schemas/product.schema";
 
 const productService = new ProductService();
 

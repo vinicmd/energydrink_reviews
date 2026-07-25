@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { UserController } from "../controllers/user.controller.ts";
-import { ensureAuthenticated } from "../middlewares/ensureAuthenticated.ts";
-import { ensureAdmin } from "../middlewares/ensureAdmin.ts";
-import { registerLimiter } from "../middlewares/rateLimiter.ts";
+import { UserController } from "../controllers/user.controller";
+import { ensureAuthenticated } from "../middlewares/ensureAuthenticated";
+import { ensureAdmin } from "../middlewares/ensureAdmin";
+import { registerLimiter } from "../middlewares/rateLimiter";
 
 export const userRoutes = Router();
 const userController = new UserController();

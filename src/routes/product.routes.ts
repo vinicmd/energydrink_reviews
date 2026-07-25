@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { ProductController } from "../controllers/product.controller.ts";
-import { ensureAuthenticated } from "../middlewares/ensureAuthenticated.ts";
-import { ensureAdmin } from "../middlewares/ensureAdmin.ts";
+import { ProductController } from "../controllers/product.controller";
+import { ensureAuthenticated } from "../middlewares/ensureAuthenticated";
+import { ensureAdmin } from "../middlewares/ensureAdmin";
 
 export const productRoutes = Router();
 const productController = new ProductController();

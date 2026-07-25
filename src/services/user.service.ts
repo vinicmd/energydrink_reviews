@@ -1,13 +1,13 @@
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import { prisma } from "../lib/prisma.ts";
+import { prisma } from "../lib/prisma";
 import { z } from "zod";
 import {
   adminUpdateUserSchema,
   createUserSchema,
   loginSchema,
   updateUserSchema,
-} from "../schemas/user.schema.ts";
+} from "../schemas/user.schema";
 
 type CreateUserData = z.infer<typeof createUserSchema>;
 type LoginData = z.infer<typeof loginSchema>;

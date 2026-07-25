@@ -1,11 +1,11 @@
 import { Request, Response } from "express";
-import { UserService } from "../services/user.service.ts";
+import { UserService } from "../services/user.service";
 import {
   adminUpdateUserSchema,
   createUserSchema,
   loginSchema,
   updateUserSchema,
-} from "../schemas/user.schema.ts";
+} from "../schemas/user.schema";
 
 const userService = new UserService();
 

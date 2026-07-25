@@ -1,9 +1,9 @@
-import { prisma } from "../lib/prisma.ts";
+import { prisma } from "../lib/prisma";
 import { z } from "zod";
 import {
   createProductSchema,
   updateProductSchema,
-} from "../schemas/product.schema.ts";
+} from "../schemas/product.schema";
 
 type CreateProductData = z.infer<typeof createProductSchema>;
 type UpdateProductData = z.infer<typeof updateProductSchema>;
