@@ -1,0 +1,29 @@
+import { NextFunction, Request, Response } from "express";
+import { ZodError } from "zod";
+
+export function errorHandler(
+  err: Error,
+  req: Request,
+  res: Response,
+  next: NextFunction,
+) {
+  if (err instanceof ZodError) {
+    res.status(400).json({
+      message: "Validation error",
+      issues: err.format(),
+    });
+    return;
+  }
+
+  if (err instanceof Error) {
+    res.status(400).json({
+      message: err.message,
+    });
+    return;
+  }
+
+  res.status(500).json({
+    message: "Internal server error",
+  });
+  return;
+}
