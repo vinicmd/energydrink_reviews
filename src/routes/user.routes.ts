@@ -2,12 +2,13 @@ import { Router } from "express";
 import { UserController } from "../controllers/user.controller.ts";
 import { ensureAuthenticated } from "../middlewares/ensureAuthenticated.ts";
 import { ensureAdmin } from "../middlewares/ensureAdmin.ts";
+import { registerLimiter } from "../middlewares/rateLimiter.ts";
 
 export const userRoutes = Router();
 const userController = new UserController();
 
-userRoutes.post("/register", userController.register);
-userRoutes.post("/login", userController.login);
+userRoutes.post("/register", registerLimiter, userController.register);
+userRoutes.post("/login", registerLimiter, userController.login);
 
 userRoutes.put("/", ensureAuthenticated, userController.update);
 userRoutes.delete("/", ensureAuthenticated, userController.delete);
