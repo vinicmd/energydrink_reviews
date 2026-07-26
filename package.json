@@ -12,7 +12,6 @@
       "onFail": "download"
     }
   },
-  "type": "module",
   "main": "src/server.ts",
   "scripts": {
     "dev": "tsx watch src/server.ts",
